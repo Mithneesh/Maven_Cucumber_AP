@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="116.495">
+    <testcase classname="Ordering a Dress in Automation Practice Application" name="User Click Evening Dress in Dresses" time="36.425">
+        <system-out><![CDATA[Given user Launch The Url...................................................passed
+When user Click The Dresses.................................................passed
+And user Click The Evening Dresses..........................................passed
+Then user Navigate To Evening Dresses Page..................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Ordering a Dress in Automation Practice Application" name="User Select The Size Colour And Add To Cart" time="38.1">
+        <system-out><![CDATA[When user Scroll Down And Click Quickview...................................passed
+And user Select The Size....................................................passed
+And user Select The Colour..................................................passed
+And user Click Add To Cart..................................................passed
+And user Click Checkout.....................................................passed
+Then user Navigate To Order Details Page....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Ordering a Dress in Automation Practice Application" name="User Signin And Confirm The Order" time="38.012">
+        <failure message="Cannot locate an element using name=processAddress&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'MITHNEESH', ip: '192.168.1.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'&#10;Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchElementException"><![CDATA[When user Scroll Down And Click Checkout....................................passed
+And user Enter The "mithneesh15@gmail.com" And "M1234567890"................passed
+And user Click On Signin....................................................passed
+And user Click Agree And Click Checkout.....................................failed
+And user Click On Payment And Done Payment..................................skipped
+And user Scroll Down And Click Confirm Order................................skipped
+Then user Receive The Order Id..............................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: Cannot locate an element using name=processAddress
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MITHNEESH', ip: '192.168.1.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByName.findElement(By.java:284)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
+	at com.Base.Base_Class.clickOnElement(Base_Class.java:166)
+	at com.Step_Definition.StepDefinition.user_click_agree_and_click_checkout(StepDefinition.java:121)
+	at ✽.user Click Agree And Click Checkout(file:///C:/Users/mithn/eclipse-workspace/Maven_Cucumber_AutomationPractice/src/test/java/com/Feature_File/AutomationPractice.feature:25)
+]]></failure>
+    </testcase>
+</testsuite>
